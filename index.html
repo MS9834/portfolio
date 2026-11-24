@@ -81,6 +81,7 @@
   .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
   .btn.ghost { background: transparent; color: var(--text); border: 1.5px solid var(--line); }
   .btn.disabled { opacity: .45; pointer-events: none; }
+  .thumb.disabled { opacity: .6; pointer-events: none; }
 
   /* 프로젝트 */
   section { padding: 24px 0 8px; }
@@ -105,6 +106,7 @@
   }
   .meta { font-size: 14px; color: var(--muted); }
   h2 { margin-top: 4px; font-size: 24px; line-height: 1.3; font-weight: 800; letter-spacing: -0.01em; }
+  h2 .days { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 3px 10px; border-radius: 999px; background: var(--navy); color: var(--navy-ink); font-size: 13px; font-weight: 700; letter-spacing: 0; white-space: nowrap; }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
   .tag { padding: 4px 10px; border-radius: 999px; background: var(--tag-bg); color: var(--tag-text); font-size: 13px; font-weight: 600; }
   ul.points { margin-top: 16px; padding-left: 0; list-style: none; }
@@ -137,7 +139,7 @@
     <h1>AI와 함께 기획부터 출시까지<br>끝까지 완성하는 게임 기획자</h1>
     <p class="intro">Mobile·PC·XR 게임 출시 경험을 바탕으로, Claude Code·Codex·Midjourney 등 AI를 작업 흐름에 직접 넣어 플레이할 수 있는 결과물로 완성해 왔습니다. 아래 게임은 설치·로그인 없이 바로 실행됩니다.</p>
     <div class="actions">
-      <a class="btn" id="pdf-btn" href="#" target="_blank" rel="noopener">포트폴리오 PDF 보기</a>
+      <a class="btn" id="pdf-btn" href="#" data-link="pdf" target="_blank" rel="noopener">포트폴리오 PDF 보기</a>
       <a class="btn ghost" href="#projects">AI 프로젝트 보기 ↓</a>
     </div>
    </div>
@@ -150,13 +152,13 @@
 
     <!-- 1. 새롱분식점 판매의 달인 -->
     <article class="project">
-      <a class="thumb" href="https://ms9834.github.io/ramen_prototype/snackbar_v31.html" target="_blank" rel="noopener" aria-label="새롱분식점 판매의 달인 플레이">
+      <a class="thumb" href="#" data-link="snackbar" target="_blank" rel="noopener" aria-label="새롱분식점 판매의 달인 플레이">
         <img src="images/snackbar.jpg" alt="새롱분식점 판매의 달인 플레이 화면" loading="lazy" style="object-position: 50% 40%">
         <span class="play">▶ 눌러서 플레이</span>
       </a>
       <div>
-        <p class="meta">아툰즈 · 2026.10 – 2026.11 · 출시</p>
-        <h2>새롱분식점 판매의 달인</h2>
+        <p class="meta">아툰즈 · 2026.10 – 2026.11</p>
+        <h2>새롱분식점 판매의 달인 <span class="days">실 작업 6일 · 31개 버전</span></h2>
         <div class="tags"><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">HTML5</span><span class="tag">모바일 웹</span></div>
         <ul class="points">
           <li>웹게임 서비스를 위한 데이터 조사와 신제품 컵라면 홍보를 겸한 모바일 미니게임 기획 및 제작</li>
@@ -165,19 +167,19 @@
           <li>게임 규칙과 난이도를 반복 시험하며 조정하고 정확한 수치값을 기록</li>
           <li>HTML 한 파일로 묶어 회사 서버에 출시 및 유튜브 커뮤니티에 배포</li>
         </ul>
-        <div class="links"><a class="btn" href="https://ms9834.github.io/ramen_prototype/snackbar_v31.html" target="_blank" rel="noopener">게임 실행 ▶</a></div>
+        <div class="links"><a class="btn" href="#" data-link="snackbar" target="_blank" rel="noopener">게임 실행 ▶</a></div>
       </div>
     </article>
 
     <!-- 2. 새롱분식점 컵라면 만들기 -->
     <article class="project">
-      <a class="thumb" href="https://ms9834.github.io/ramen_prototype/ramen_v31.html" target="_blank" rel="noopener" aria-label="새롱분식점 컵라면 만들기 플레이">
+      <a class="thumb" href="#" data-link="ramen" target="_blank" rel="noopener" aria-label="새롱분식점 컵라면 만들기 플레이">
         <img src="images/ramen.jpg" alt="새롱분식점 컵라면 만들기 메인 화면" loading="lazy">
         <span class="play">▶ 눌러서 플레이</span>
       </a>
       <div>
         <p class="meta">아툰즈 · 2026.10 – 2026.11</p>
-        <h2>새롱분식점 컵라면 만들기</h2>
+        <h2>새롱분식점 컵라면 만들기 <span class="days">실 작업 3일 · 31개 버전</span></h2>
         <div class="tags"><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">HTML5</span><span class="tag">UI 레이아웃</span></div>
         <ul class="points">
           <li>웹게임 서비스를 위한 데이터 조사와 신제품 컵라면 홍보를 겸한 모바일 미니게임 기획 및 제작</li>
@@ -186,7 +188,7 @@
           <li>UI 레이아웃을 직접 설계하고 배치 기준과 참고 이미지를 AI에 컨텍스트로 전달해 화면 완성도 향상</li>
           <li>공개 전 서버 미제공으로 GitHub Pages 공유를 통해 내부 피드백 수집 및 반영</li>
         </ul>
-        <div class="links"><a class="btn" href="https://ms9834.github.io/ramen_prototype/ramen_v31.html" target="_blank" rel="noopener">게임 실행 ▶</a></div>
+        <div class="links"><a class="btn" href="#" data-link="ramen" target="_blank" rel="noopener">게임 실행 ▶</a></div>
       </div>
     </article>
 
@@ -194,12 +196,12 @@
     <article class="project wide">
       <div>
         <p class="meta">개인 프로젝트 · 2026.11 · Unity 6 · 1인 개발</p>
-        <h2>점프 업! 구르메</h2>
+        <h2>점프 업! 구르메 : 견습셰프의 맛있는 모험 <span class="days">실 작업 10일</span></h2>
         <div class="tags"><span class="tag">Claude Code</span><span class="tag">Coplay MCP</span><span class="tag">Blender MCP</span><span class="tag">AI 에이전트</span><span class="tag">루프 엔지니어링</span></div>
         <div class="video" id="video"><div class="empty">플레이 영상 준비 중</div></div>
         <ul class="points">
           <li>요리 콘셉트의 3D 플랫포머 액션 게임 기획 및 제작</li>
-          <li>Unity·Blender에 Coplay MCP·Blender MCP를 설치하고 Claude Code와 연결해, AI로 씬 구성과 3D 모델링을 제어하는 1인 개발 환경 구축</li>
+          <li>Unity·Blender에 Coplay MCP·Blender MCP를 설치하고 Claude Code와 연결해,<br>AI로 씬 구성과 3D 모델링을 제어하는 1인 개발 환경 구축</li>
           <li>역할별 AI 에이전트를 적용하고, 레벨 디자인 문서와 맵툴 설계를 교차 검증하는 루프 엔지니어링으로 4회 반복해 불일치 40건 해소</li>
           <li>Codex를 연결해 AI로 원화를 만들고 Tripo·Blender로 보스·몬스터 등 3D 리소스 제작</li>
           <li>Claude Code를 활용해 소울라이크 3인칭 시점의 1챕터 골렘 보스전 구현 및 조작감 폴리싱</li>
@@ -218,7 +220,7 @@
           <li>아트 인력 없이 Midjourney, ChatGPT-4o를 활용한 스프라이트 시트 제작과 Figma 리터칭 과정을 통해 AI를 작업 파이프라인에 도입</li>
           <li>생성 조건 고정과 프롬프트 기록을 통해 균일화된 캐릭터 21종과 보스 5종을 최종 스프라이트 시트로 제작 및 Unity 적용까지 진행</li>
         </ul>
-        <div class="links"><a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.OJH.TheLastSun" target="_blank" rel="noopener">Google Play에서 보기 ↗</a></div>
+        <div class="links"><a class="btn ghost" href="#" data-link="lastsun" target="_blank" rel="noopener">Google Play에서 보기 ↗</a></div>
       </div>
     </article>
   </section>
@@ -227,22 +229,32 @@
 </div>
 
 <script>
-  // ===== 여기 두 줄만 채우면 됩니다 =====
-  // 포트폴리오 PDF: 구글 드라이브에서 "링크 복사"한 주소를 그대로 붙여 넣기
-  const PDF_URL = '';
-  // 점프 업! 구르메 영상: 유튜브 주소를 그대로 붙여 넣기 (예: https://youtu.be/xxxxxxxxxxx)
-  const YOUTUBE_URL = '';
+  // ===== 링크 모음 =====
+  // 바탕화면 '포트폴리오_링크편집기.html'로 고치면 아래 줄이 자동으로 바뀝니다. (직접 고쳐도 됩니다)
+  const LINKS = /*LINKS-START*/{
+    "pdf": "https://drive.google.com/file/d/18g4Xyy-HvUWtwkZCEig4f0WZ0t8TVKrK/view?usp=sharing",
+    "youtube": "https://youtu.be/4MBaxZzi_AU?si=pjE0Qhjq8Bv9wm0k",
+    "snackbar": "https://ms9834.github.io/ramen_prototype/snackbar_v31.html",
+    "ramen": "https://ms9834.github.io/ramen_prototype/ramen_v31.html",
+    "lastsun": "https://play.google.com/store/apps/details?id=com.OJH.TheLastSun"
+  }/*LINKS-END*/;
 
-  const pdfBtn = document.getElementById('pdf-btn');
-  if (PDF_URL) pdfBtn.href = PDF_URL; else pdfBtn.classList.add('disabled');
+  // data-link가 붙은 버튼·그림에 주소를 넣는다. 주소가 비어 있으면 흐리게 표시
+  document.querySelectorAll('[data-link]').forEach(a => {
+    const url = LINKS[a.dataset.link];
+    if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+    else { a.removeAttribute('href'); a.classList.add('disabled'); }
+  });
 
-  const m = YOUTUBE_URL.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
+  // 유튜브 주소에서 영상 번호를 찾아 페이지 안에 영상을 넣는다
+  const m = (LINKS.youtube || '').match(/(?:youtu\.be\/|v=|embed\/|shorts\/|live\/)([\w-]{11})/);
   if (m) {
     const f = document.createElement('iframe');
     f.src = 'https://www.youtube-nocookie.com/embed/' + m[1] + '?rel=0';
-    f.title = '점프 업! 구르메 플레이 영상';
+    f.title = '점프 업! 구르메 : 견습셰프의 맛있는 모험 플레이 영상';
     f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     f.allowFullscreen = true;
+    f.referrerPolicy = 'strict-origin-when-cross-origin';   // 유튜브가 어느 사이트인지 알아야 재생된다 (오류 153 방지)
     const box = document.getElementById('video');
     box.textContent = '';
     box.appendChild(f);
